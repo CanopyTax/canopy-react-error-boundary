@@ -36,7 +36,7 @@ export default function decorateOptions(opts) {
                 <div className="cps-card__body" style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center'}}>
                   <img src="https://cdn.canopytax.com/images/NoFilter.svg" class="errorImg" style={{width: '50%', padding: '16px 0'}} />
                   <div style={{padding: '0 64px', textAlign: 'center'}}>
-                    If this error continues, click on the support bubble or call 855-558-8407.
+                    If this error continues, click on the support bubble or call <a href="tel:855-558-8407">855-558-8407</a>.
                   </div>
                 </div>
                 <div className="cps-modal__dialog__actions">
