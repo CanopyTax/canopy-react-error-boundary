@@ -15,7 +15,7 @@ export default function decorateOptions(opts) {
       }
       render() {
         if (!this.state.caughtError) {
-          return <Comp {...this.props} caughtError={this.state.caughtError} caughtErrorInfo={this.state.caughtErrorInfo} />
+          return <Comp {...this.props} />
         } else if (document.getElementById('canopy-react-error-boundary-modal')) {
           // Only show one application's error modal at a time
           return null;
@@ -34,7 +34,7 @@ export default function decorateOptions(opts) {
                   <a className="cps-modal__dialog__close cps-icon cps-icon-close" onClick={() => this.setState({dismissed: false})} />
                 </div>
                 <div className="cps-card__body" style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center'}}>
-                  <img src="https://cdn.canopytax.com/images/NoFilter.svg" class="errorImg" style={{width: '50%', padding: '16px 0'}} />
+                  <img src="https://cdn.canopytax.com/images/NoFilter.svg" style={{width: '50%', padding: '16px 0'}} />
                   <div style={{padding: '0 64px', textAlign: 'center'}}>
                     If this error continues, click on the support bubble or call <a href="tel:855-558-8407">855-558-8407</a>.
                   </div>
