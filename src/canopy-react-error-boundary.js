@@ -8,6 +8,7 @@ export default function decorateOptions(opts) {
 
   return function decorateComponent(Comp) {
     return class CanopyReactErrorBoundary extends React.Component {
+      static displayName = `CanopyReactErrorBoundary(${opts.featureName})`
       state = {
         caughtError: null,
         caughtErrorInfo: null,
@@ -15,7 +16,15 @@ export default function decorateOptions(opts) {
       }
       render() {
         if (!this.state.caughtError) {
-          return <Comp {...this.props} />
+          if (opts.noStrictMode || !React.StrictMode) {
+            return <Comp {...this.props} />
+          } else {
+            return (
+              <React.StrictMode>
+                <Comp {...this.props} />
+              </React.StrictMode>
+            )
+          }
         } else if (document.getElementById('canopy-react-error-boundary-modal')) {
           // Only show one application's error modal at a time
           return null;
