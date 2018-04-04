@@ -1,6 +1,6 @@
 {
   "name": "canopy-react-error-boundary",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Decorator for react error boundaries at Canopy",
   "main": "lib/canopy-react-error-boundary",
   "repository": "git@github.com:CanopyTax/canopy-react-error-boundary.git",
