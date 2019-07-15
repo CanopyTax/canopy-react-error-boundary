@@ -62,6 +62,16 @@ export default function decorateOptions(opts) {
         }
       }
       componentDidCatch(err, info) {
+        if (info && info.componentStack) {
+          err.extra =  Object.assign(err.extra || {}, {
+            componentStack: info.componentStack
+          });
+        }
+
+        setTimeout(() => {
+          throw err;
+        });
+
         this.setState({
           caughtError: err,
           caughtErrorInfo: info,
