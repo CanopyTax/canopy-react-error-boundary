@@ -43,9 +43,12 @@ export default function decorateOptions(opts) {
                   <a className="cps-modal__dialog__close cps-icon cps-icon-close" onClick={() => this.setState({dismissed: false})} />
                 </div>
                 <div className="cps-card__body" style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center'}}>
-                  <img src="https://cdn.canopytax.com/images/NoFilter.svg" style={{width: '50%', padding: '16px 0'}} />
-                  <div style={{padding: '0 64px', textAlign: 'center'}}>
-                    If this error continues, click on the support bubble or call <a href="tel:855-558-8407">855-558-8407</a>.
+                  <img src="https://cdn.canopytax.com/images/ErrorState.svg" style={{width: '25%', padding: '16px 0'}} />
+                  <div style={{fontSize: '20px', fontWeight: 'bold', textAlign: 'center'}}>
+                    Looks like there was a problem
+                  </div>
+                  <div style={{textAlign: 'center'}}>
+                    If the error continues, chat with support via the help center or call <a href="tel:855-558-8407">855-558-8407</a>
                   </div>
                 </div>
                 <div className="cps-modal__dialog__actions">
