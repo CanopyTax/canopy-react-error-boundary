@@ -33,7 +33,7 @@ export default function decorateOptions(opts) {
           return null;
         } else {
           return (
-            <div className="cps-modal" id="canopy-react-error-boundary-modal">
+            <div className="cps-modal" id="canopy-react-error-boundary-modal" style={{whiteSpace: "normal"}}>
               <div className="cps-modal__screen" />
               <div className="cps-modal__dialog cps-card__height-3" style={{maxWidth: '100vw', transform: "translateX(-50%)", left: "50%"}}>
                 <div className="cps-card__header cps-subheader-sm">
