@@ -26,5 +26,5 @@ class Root extends React.Component {
 
 #### Opts
 - `featureName` (required): A string name for the feature. This is shown to the user when componentDidCatch is called, so it should be user friendly.
-- `noStrictMode` (optional): A boolean that defaults to false. When true, this turns of react strict mode. Note that canopy-react-error-boundary is compatible with react@<=15 and will
+- `noStrictMode` (optional): A boolean that defaults to false. When true, this turns off react strict mode. Note that canopy-react-error-boundary is compatible with react@<=15 and will
   not try to use `React.StrictMode` if it is not available.
