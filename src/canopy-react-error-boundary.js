@@ -1,5 +1,5 @@
-import React from "react";
-import { CpButton, CpModal, CpEmptyState } from "canopy-styleguide!sofe";
+import React from 'react';
+import { CpButton, CpModal, CpEmptyState } from 'canopy-styleguide!sofe';
 
 export default function decorateOptions(opts) {
   if (typeof opts !== "object" || typeof opts.featureName !== "string") {
@@ -10,16 +10,12 @@ export default function decorateOptions(opts) {
 
   return function decorateComponent(Comp) {
     return class CanopyReactErrorBoundary extends React.Component {
-      constructor(props) {
-        super(props);
-        console.count("construct");
-      }
-      static displayName = `CanopyReactErrorBoundary(${opts.featureName})`;
+      static displayName = `CanopyReactErrorBoundary(${opts.featureName})`
       state = {
         caughtError: null,
         caughtErrorInfo: null,
         dismissed: false,
-      };
+      }
       render() {
         return (
           <>
