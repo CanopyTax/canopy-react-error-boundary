@@ -25,7 +25,7 @@ export default function decorateOptions(opts) {
               width={500}
             >
               <CpModal.Header
-                title={`The ${opts.featureName} is having problems`}
+                title={`The ${opts.featureName} feature is having problems`}
               />
               <CpModal.Body>
                 <CpEmptyState
