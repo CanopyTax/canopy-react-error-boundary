@@ -11,6 +11,9 @@ export default function decorateOptions(opts) {
   return function decorateComponent(Comp) {
     return class CanopyReactErrorBoundary extends React.Component {
       static displayName = `CanopyReactErrorBoundary(${opts.featureName})`
+      static getDerivedStateFromError(error) {    
+        return { caughtError: true };  
+      }
       state = {
         caughtError: null,
         caughtErrorInfo: null,
@@ -70,11 +73,6 @@ export default function decorateOptions(opts) {
 
         setTimeout(() => {
           throw err;
-        });
-
-        this.setState({
-          caughtError: err,
-          caughtErrorInfo: info,
         });
       }
     };
